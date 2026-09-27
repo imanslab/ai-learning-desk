@@ -2530,7 +2530,7 @@ const CARDS = [
     "category": "LLMs & systems",
     "title": "Caching and augmentation chain",
     "prompt": "How do you serve the same knowledge without paying for it twice?",
-    "definition": "Caching returns a stored answer or a cached prompt prefix for repeated inputs. An augmentation chain adds retrieved context only where the cache misses.",
+    "definition": "An augmentation chain tries the cheapest tier first: a stored answer, then a cached prompt prefix, then retrieval, then a full model call.",
     "technique": "Order the tiers from cheapest to most expensive, measure hit rates, and expire entries when the source changes.",
     "example": "A six-tier cache-and-augmentation chain can target 60 to 70 percent cached tokens. Measure the hit rate before you quote it.",
     "pitfall": "Say designed for, not achieved, unless the number was measured in production.",
@@ -3541,5 +3541,55 @@ const CARDS = [
     "source": "Web Dev Cody: Software Engineering Interviews Are Changing",
     "url": "https://www.youtube.com/watch?v=Ge42_DE0rpI",
     "sayIt": "I plan with the largest model at high effort, implement with sub-agents on a cheaper one, keep the instruction file short and the workflows in skills, run parallel issues in worktrees, and review every plan and diff adversarially before I read it myself."
+  },
+  {
+    "id": "card-303",
+    "category": "LLMs & systems",
+    "title": "Cache-augmented generation",
+    "prompt": "When can you skip retrieval and load everything?",
+    "definition": "CAG loads a small, fixed knowledge base into the model's context once, caches the processed prompt, and answers every question from it without a retrieval step.",
+    "technique": "Count the corpus in tokens first. If it fits the context window with room for the question and the answer, preload it, cache it, and compare accuracy and cost with RAG on the same questions.",
+    "example": "A twelve-page staff handbook fits in one prompt. Every question reuses the same cached prefix, and no retriever can miss the right page.",
+    "pitfall": "CAG stops working when the corpus outgrows the window. A long context also keeps withdrawn or contradicting pages in view, so the model can still pick the wrong one.",
+    "source": "Chan et al., Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks",
+    "url": "https://arxiv.org/abs/2412.15605",
+    "fullName": "CAG: Cache-Augmented Generation",
+    "sayIt": "RAG fetches the right pages for each question. CAG loads all the pages once and caches them. Use CAG when the knowledge is small and stable, and RAG when it is large or changing."
+  },
+  {
+    "id": "card-304",
+    "category": "LLMs & systems",
+    "title": "Prompt caching",
+    "prompt": "Why does the second call with the same long prompt cost less?",
+    "definition": "The provider stores the processed state of a prompt prefix. A later request that starts with exactly the same prefix reads it back instead of processing it again.",
+    "technique": "Put the stable parts first, in the order tools, system prompt, long document, and the changing question last. Mark the end of the stable part as a cache breakpoint, then read the cache fields in the response.",
+    "example": "Anthropic's documentation prices a five-minute cache write at 1.25 times the base input rate and a cache read at 0.1 times on standard models. After one write, each read of a cached handbook costs a tenth of reading it fresh.",
+    "pitfall": "The match is on the exact prefix. One changed character early in the prompt, such as a timestamp in the system prompt, turns every later call into a new cache write.",
+    "source": "Anthropic: prompt caching",
+    "url": "https://platform.claude.com/docs/en/docs/build-with-claude/prompt-caching"
+  },
+  {
+    "id": "card-305",
+    "category": "LLMs & systems",
+    "title": "Answer cache and prompt cache",
+    "prompt": "Which cache stores what?",
+    "definition": "An answer cache stores a finished reply and returns it for a repeated question. A prompt cache stores the processed prompt prefix and still runs the model on each new question.",
+    "technique": "Use an answer cache only for questions that repeat word for word, from sources that rarely change, and expire it when the source changes. Use a prompt cache for a long shared prefix with a different question each time.",
+    "example": "A repeated \"What are the core hours?\" can come from the answer cache. \"Can I work from home on Friday if my manager agrees?\" needs the model, reading the cached handbook prefix.",
+    "pitfall": "An answer cache can serve a stale reply after the source changes. A prompt cache cannot serve a stale reply from a changed source, because the change alters the prefix and forces a miss.",
+    "source": "Anthropic: prompt caching",
+    "url": "https://platform.claude.com/docs/en/docs/build-with-claude/prompt-caching"
+  },
+  {
+    "id": "card-306",
+    "category": "LLMs & systems",
+    "title": "Choosing RAG, CAG, or both",
+    "prompt": "Which one fits this knowledge base?",
+    "definition": "RAG retrieves a few passages for each question. CAG preloads the whole corpus and caches it. The choice depends on corpus size, how often it changes, and how many questions share it.",
+    "technique": "Count the corpus tokens, the questions per hour, and the edits per day. Small, stable and busy points to CAG. Large or changing points to RAG. A cached system prompt with retrieval after it combines both.",
+    "example": "A twelve-page handbook asked hundreds of times a day suits CAG. An archive of forty thousand contracts needs RAG.",
+    "pitfall": "A cache entry lives five minutes by default. When questions arrive further apart than that, every call writes the cache and none reads it, which costs more than no cache at all.",
+    "source": "Chan et al., Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks",
+    "url": "https://arxiv.org/abs/2412.15605"
   }
 ];
