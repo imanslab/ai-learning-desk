@@ -3346,7 +3346,7 @@ const CARDS = [
     "technique": "Pick one harness and learn it properly. Try a second so you can say what differs.",
     "example": "The video's interviewer treats a candidate who has only used Copilot's default model as a red flag.",
     "pitfall": "Knowing a harness name is not knowing the harness. Be able to explain what it does between two tool calls.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing",
     "url": "https://www.youtube.com/watch?v=Ge42_DE0rpI"
   },
   {
@@ -3358,7 +3358,7 @@ const CARDS = [
     "technique": "Use the largest model to plan and orchestrate, and cheaper models for bounded implementation steps. Measure the quality difference on your own work.",
     "example": "The video's answer: Fable for long complex tasks and as orchestrator, Sonnet for sub-agents to save tokens at a small quality cost.",
     "pitfall": "Name the trade-off in a number you measured, not in a feeling.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026; Claude Code docs: model configuration",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing; Claude Code docs: model configuration",
     "url": "https://code.claude.com/docs/en/model-config"
   },
   {
@@ -3370,7 +3370,7 @@ const CARDS = [
     "technique": "Low effort for a quick lookup you can verify. High or extra high for a plan, a large refactor, or anything that touches 50 files. Treat max as diminishing returns.",
     "example": "A quick question about one function at low effort. A refactor across the codebase at extra high.",
     "pitfall": "Lower effort means more hallucination. Do not treat a low-effort answer as gospel.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing",
     "url": "https://www.youtube.com/watch?v=Ge42_DE0rpI"
   },
   {
@@ -3382,7 +3382,7 @@ const CARDS = [
     "technique": "Use it for larger features, unclear requirements, and high-risk work. Ask it to ask you questions. Skip it for a small, well-described change.",
     "example": "Plan the feature at extra high effort, edit the plan, then let the agent implement it.",
     "pitfall": "A plan the human did not read is not a review gate.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026; Claude Code docs: common workflows",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing; Claude Code docs: common workflows",
     "url": "https://code.claude.com/docs/en/common-workflows"
   },
   {
@@ -3394,7 +3394,7 @@ const CARDS = [
     "technique": "Know the modes your harness offers, what each one allows, and how to allow a safe command permanently.",
     "example": "A command that deletes the root directory must be classified as dangerous and refused in auto mode.",
     "pitfall": "Bypassing permissions to save clicks removes the only deterministic safety layer.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026; Claude Code docs: permissions",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing; Claude Code docs: permissions",
     "url": "https://code.claude.com/docs/en/permissions"
   },
   {
@@ -3406,7 +3406,7 @@ const CARDS = [
     "technique": "Say the panel, the component, the current behaviour, and the target behaviour. Be visual. Dictate with a voice tool if it is faster than typing.",
     "example": "On the left sessions panel, the grid shows three or four columns. Cap it at two.",
     "pitfall": "A vague prompt costs a round trip for every missing detail.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing",
     "url": "https://www.youtube.com/watch?v=Ge42_DE0rpI"
   },
   {
@@ -3418,7 +3418,7 @@ const CARDS = [
     "technique": "When you type the same prompt twice, ask the agent to create a skill that encapsulates the workflow. Pull request descriptions, reviews, releases, and deploys are the usual first skills.",
     "example": "A release skill that spells out how to tag, what to push, and which action to invoke.",
     "pitfall": "A skill nobody maintains drifts from the real process and then teaches the agent the wrong one.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026; Claude Code docs: skills",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing; Claude Code docs: skills",
     "url": "https://code.claude.com/docs/en/skills"
   },
   {
@@ -3430,7 +3430,7 @@ const CARDS = [
     "technique": "Keep it short: rules, conventions, and a final check such as run the tests before you call the work done. Move heavy workflows into skills that load only when needed.",
     "example": "A bullet list of conventions and one line that says two adversarial review rounds before done.",
     "pitfall": "Everything in the file costs tokens on every prompt, for everyone on the team. It also gets skipped more often as it grows.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026; Claude Code docs: memory; agents.md",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing; Claude Code docs: memory; agents.md",
     "url": "https://code.claude.com/docs/en/memory"
   },
   {
@@ -3442,7 +3442,7 @@ const CARDS = [
     "technique": "Install the servers you use, name them in the prompt, and turn off the ones you do not need.",
     "example": "Use the error-tracking server to fetch the last day of errors and open an issue for each new one.",
     "pitfall": "Every installed server adds tokens to every prompt whether you use it or not.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026; Claude Code docs: MCP",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing; Claude Code docs: MCP",
     "url": "https://code.claude.com/docs/en/mcp"
   },
   {
@@ -3454,7 +3454,7 @@ const CARDS = [
     "technique": "Inspect the context breakdown, remove skills and servers that add no value, and keep the fixed cost small so the smaller models still have room.",
     "example": "A set of unused mail servers eating a visible share of the window on every prompt.",
     "pitfall": "A full context confuses the model over time. Trash in the window is not free even when the bar is not full.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026; Claude Code docs: costs",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing; Claude Code docs: costs",
     "url": "https://code.claude.com/docs/en/costs"
   },
   {
@@ -3466,7 +3466,7 @@ const CARDS = [
     "technique": "Orchestrate with the strong model, implement with sub-agents, and check their output before merging it.",
     "example": "A planner on the largest model, three implementers on a cheaper one, each with its own context.",
     "pitfall": "A sub-agent that lost the user's constraint returns confident work on the wrong task.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026; Claude Code docs: sub-agents",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing; Claude Code docs: sub-agents",
     "url": "https://code.claude.com/docs/en/sub-agents"
   },
   {
@@ -3490,7 +3490,7 @@ const CARDS = [
     "technique": "One issue, one worktree, one agent. Use a consistent branch prefix so the results are easy to review and merge.",
     "example": "Five GitHub issues pasted into five worktrees, each agent opening its own pull request.",
     "pitfall": "Parallel agents on one working copy overwrite each other.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026; git documentation",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing; git documentation",
     "url": "https://git-scm.com/docs/git-worktree"
   },
   {
@@ -3502,7 +3502,7 @@ const CARDS = [
     "technique": "Send bounded, well-described issues to runners. Keep exploratory and high-risk work local where you can watch it.",
     "example": "Kick off five issues to sandboxes in the morning and review five pull requests after lunch.",
     "pitfall": "A runner you cannot interrupt needs a kill criterion and a small blast radius.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026; Claude Code docs: Claude Code on the web",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing; Claude Code docs: Claude Code on the web",
     "url": "https://code.claude.com/docs/en/claude-code-on-the-web"
   },
   {
@@ -3514,7 +3514,7 @@ const CARDS = [
     "technique": "Review the plan, then the code. Ask for security specifically. Two rounds, then the human.",
     "example": "A CLAUDE.md line requiring two adversarial review rounds with a different harness before the work counts as done.",
     "pitfall": "Two models with the same blind spot agree with each other.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing",
     "url": "https://www.youtube.com/watch?v=Ge42_DE0rpI"
   },
   {
@@ -3526,7 +3526,7 @@ const CARDS = [
     "technique": "Give it a testable goal, guardrails on what it may touch, a budget, and a way to stop. Read the trace in the morning before the diff.",
     "example": "A twelve-hour run with tests as the stop condition and a worktree as the boundary.",
     "pitfall": "Success is the goal met, not the loop finished.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing",
     "url": "https://www.youtube.com/watch?v=Ge42_DE0rpI"
   },
   {
@@ -3538,7 +3538,7 @@ const CARDS = [
     "technique": "Bring one real workflow you can demonstrate in an hour, with the tools already installed. Name what you have not tried.",
     "example": "The video's own list, and the line that a senior who cannot describe any of it is a red flag to that interviewer.",
     "pitfall": "Naming tools you have not used is found out in the first follow-up question.",
-    "source": "Web Dev Cody: Software Engineering Interviews Are Changing, 24 Sep 2026",
+    "source": "Web Dev Cody: Software Engineering Interviews Are Changing",
     "url": "https://www.youtube.com/watch?v=Ge42_DE0rpI",
     "sayIt": "I plan with the largest model at high effort, implement with sub-agents on a cheaper one, keep the instruction file short and the workflows in skills, run parallel issues in worktrees, and review every plan and diff adversarially before I read it myself."
   }
