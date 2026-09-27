@@ -1,0 +1,28 @@
+# AI Learning Desk
+
+> A free study page of flash cards on machine learning, deep learning, reinforcement learning, language models and AI systems in production. Each card has a question, the idea, the technique, one example and one pitfall, in plain English.
+
+The cards summarise public papers and official documentation in the author's own words. Cards with a link point to the original source. Examples use generated or illustrative data and make no claim about a real company, market or person.
+
+The cards are licensed CC BY-NC-SA 4.0: free to share and adapt for non-commercial use with credit. Commercial rights are reserved by the author. The page code is MIT.
+
+## Canonical pages
+
+- [The study page](https://imanslab.github.io/ai-learning-desk/)
+- [Repository](https://github.com/imanslab/ai-learning-desk)
+- [Licence notice: what is free and what is reserved](https://github.com/imanslab/ai-learning-desk/blob/main/NOTICE)
+
+## Topics
+
+- ML foundations, validation and metrics
+- Deep learning, convolutional networks, recurrent networks and transformers
+- Reinforcement learning
+- Language models, agents and coding agents
+- Time series, quant risk and simulation
+- Experiments, monitoring, explainability and fairness
+- Fuzzy logic and swarm optimisation
+- Production, governance, trading and energy applications
+
+## Persian
+
+- [راهنمای فارسی](https://github.com/imanslab/ai-learning-desk/blob/main/README.fa.md)

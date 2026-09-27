@@ -1,5 +1,7 @@
 # AI Learning Desk
 
+[فارسی](README.fa.md) | **English**
+
 A study page of 286 flash cards on machine learning, deep learning, reinforcement learning, language models and AI systems in production.
 
 Open the site: https://imanslab.github.io/ai-learning-desk/
@@ -50,6 +52,12 @@ Then open http://localhost:8000 in a browser. Opening index.html directly from t
 ## Sources
 
 Cards with a link point to the original paper or the official documentation. Cards marked "Author's study notes" or "Author's research notes" come from the author's own notes. Check the linked source before you rely on a card.
+
+## Licence
+
+The cards and the written documents are licensed [CC BY-NC-SA 4.0](LICENSE). You may share and adapt them for non-commercial use, with credit, under the same terms. Commercial rights are reserved by the author. The page code is licensed [MIT](LICENSE-CODE). [NOTICE](NOTICE) explains what each licence covers and how to ask for a commercial licence.
+
+The name is covered separately in [TRADEMARK.md](TRADEMARK.md). Contributions are accepted under [CLA.md](CLA.md). See also [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [SECURITY.md](SECURITY.md) and [FUNDING.md](FUNDING.md).
 
 ## Disclaimer
 

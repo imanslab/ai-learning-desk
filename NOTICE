@@ -1,0 +1,74 @@
+AI Learning Desk
+Copyright (C) Iman Samizadeh
+
+This repository is under two licences. Which one applies depends on the file.
+
+THE STUDY CARDS AND THE WRITTEN DOCUMENTS
+------------------------------------------
+
+cards.js, README.md, README.fa.md, the other .md files and llms.txt are
+licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+International licence (CC BY-NC-SA 4.0). The full text is in LICENSE.
+
+You may copy, share, translate and adapt the cards for any non-commercial
+purpose, provided that you:
+
+  (a) give credit in this form, or a form that carries the same information:
+
+        "AI Learning Desk" by Iman Samizadeh,
+        https://github.com/imanslab/ai-learning-desk,
+        licensed under CC BY-NC-SA 4.0
+
+  (b) say if you changed the material;
+
+  (c) license your adapted material under CC BY-NC-SA 4.0 as well.
+
+Teaching a free class, studying with friends, and quoting cards in a free blog
+post, a free video or a school assignment are non-commercial uses.
+
+THE PAGE CODE
+-------------
+
+index.html, app.js and styles.css are licensed under the MIT licence. The text
+is in LICENSE-CODE. You may reuse the code for any purpose, including a
+commercial one. The MIT licence on the code does not license the cards: a page
+built from this code that shows these cards is still bound by CC BY-NC-SA 4.0
+for the cards.
+
+COMMERCIAL USE OF THE CARDS
+---------------------------
+
+Commercial rights in the cards are reserved by the author. This includes, and
+is not limited to, selling the cards or an adaptation of them, putting them
+behind a paywall, using them in a paid course, a paid app, a book, or paid
+training, and using them to train or tune a commercial model or product.
+
+The author may publish paid editions, courses, books or other products built
+from this material, and may grant commercial licences to others. Nothing in
+this repository limits that. Contributions are accepted under CLA.md for the
+same reason: so that no single contribution can block a commercial licence.
+
+To ask for a commercial licence, use the contact details on the author's GitHub
+profile, https://github.com/Iman. Permission is specific and is given in
+writing. Silence is not permission.
+
+THE NAME
+--------
+
+Neither licence grants rights in the name "AI Learning Desk" or in its mark.
+See TRADEMARK.md.
+
+SOURCES
+-------
+
+Cards with a link summarise the linked paper or official documentation in the
+author's own words. The linked works belong to their authors and publishers and
+are not covered by either licence here. Cards marked "Author's study notes" or
+"Author's research notes" come from the author's own notes.
+
+A LIMIT WORTH STATING PLAINLY
+-----------------------------
+
+This file records the author's position. It is not legal advice and it was not
+drafted by a lawyer. If commercial use of this material ever matters, take
+advice.

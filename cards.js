@@ -2302,7 +2302,7 @@ const CARDS = [
     "technique": "Let the decoder attend over all encoder states at each step instead of reading one summary vector.",
     "example": "Translate or summarise a long sequence without losing its early content.",
     "pitfall": "Attention adds cost that grows with input length squared.",
-    "source": "Bahdanau et al. 2014",
+    "source": "Bahdanau et al., original paper",
     "url": "https://arxiv.org/abs/1409.0473"
   },
   {
@@ -2425,7 +2425,7 @@ const CARDS = [
     "technique": "Write the rubric, collect human labels on a sample, measure judge agreement, and re-check agreement when the judge model changes.",
     "example": "Score whether an answer is supported by retrieved passages, then audit a sample by hand.",
     "pitfall": "A judge prefers its own style and length. Agreement with humans is the only licence to use it.",
-    "source": "Zheng et al. 2023",
+    "source": "Zheng et al., original paper",
     "url": "https://arxiv.org/abs/2306.05685",
     "fullName": "LLM: Large Language Model"
   },
@@ -2571,7 +2571,7 @@ const CARDS = [
     "technique": "Generate teacher outputs on a representative corpus, train the student on them, and evaluate both against the same golden set.",
     "example": "Distil a routing classifier from a frontier model so routing costs almost nothing.",
     "pitfall": "The student inherits the teacher's errors and adds its own.",
-    "source": "Hinton et al. 2015",
+    "source": "Hinton et al., original paper",
     "url": "https://arxiv.org/abs/1503.02531"
   },
   {
