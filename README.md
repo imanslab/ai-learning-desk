@@ -2,7 +2,7 @@
 
 [فارسی](README.fa.md) | **English**
 
-A study page of 306 flash cards on machine learning, deep learning, reinforcement learning, language models and AI systems in production.
+A study page of 312 flash cards on machine learning, deep learning, reinforcement learning, language models and AI systems in production.
 
 Open the site: https://imanslab.github.io/ai-learning-desk/
 
@@ -22,15 +22,15 @@ You can search, filter by topic, shuffle, and mark cards as learned. Progress is
 ## Topics
 
 - ML foundations: 25 cards
-- Validation & metrics: 24 cards
+- Validation & metrics: 25 cards
 - Deep learning: 26 cards
 - CNN & detection: 11 cards
 - RNN & transformers: 14 cards
 - Reinforcement learning: 34 cards
-- LLMs & systems: 66 cards
+- LLMs & systems: 70 cards
 - Time series & research: 13 cards
 - Quant risk & simulation: 15 cards
-- Experiments & monitoring: 12 cards
+- Experiments & monitoring: 13 cards
 - Explainability & fairness: 8 cards
 - Fuzzy & evolutionary: 12 cards
 - Production & governance: 20 cards
